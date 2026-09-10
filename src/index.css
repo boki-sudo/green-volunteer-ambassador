@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  direction: rtl;
+  text-align: right;
+}
+
+html, body {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* RTL Specific Utilities */
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card Styling */
+.card-gradient {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(13, 148, 136, 0.1) 100%);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+/* Badge Styling */
+.badge-emerald {
+  @apply inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold;
+}
+
+/* Button Styling */
+.btn-primary {
+  @apply px-4 py-2 bg-gradient-emerald text-white rounded-lg font-semibold hover:shadow-lg transition-smooth;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-white border-2 border-emerald-600 text-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #16a34a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #15803d;
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+}
